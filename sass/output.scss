@@ -1,0 +1,53 @@
+@import "vendors/bootstrap/bootstrap";
+
+/**
+ * CSS SPRITES IMPORT
+ */
+@import "../img/icons/*.png";
+@include all-icons-sprites;
+
+/**
+ * TO DO LIST CSS
+ */
+
+/** Reset outline of elements. */
+:focus {
+outline: 0;
+}
+
+ul#todolist {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	li {
+		margin-bottom: 10px;
+		width:300px;
+		a.delete{
+			display:inline-block;
+			@include icons-sprite(remove);
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			cursor:pointer;	width:32px;
+			height:32px;
+			float:right;
+			vertical-align: middle;
+			margin:-5px 0 10px 0;
+		}
+	}
+}
+a#addItem {
+	display:inline-block;
+	@include icons-sprite(add);
+	text-indent: 200%;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor:pointer;	width:32px;
+	height:32px;
+	vertical-align: middle;
+	margin-left: 10px;
+	border:none;
+}
+.list-group-item{
+	border:none;
+}
